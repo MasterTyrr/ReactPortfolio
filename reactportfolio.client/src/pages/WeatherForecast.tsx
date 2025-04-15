@@ -9,9 +9,11 @@ interface Forecast {
 function WeatherForecast(){
     const [forecasts, setForecasts] = useState<Forecast[]>();
     async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
+        console.log("Test2");
+        const response = await fetch('GetWeatherForecast');
         if (response.ok) {
             const data = await response.json();
+            console.log(data);
             setForecasts(data);
         }
     }

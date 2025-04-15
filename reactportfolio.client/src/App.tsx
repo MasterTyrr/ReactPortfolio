@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import { useEffect, useState } from 'react';
 import './App.css';
-import WeatherForecast from './pages/WeatherForecast'
+//import WeatherForecast from './pages/WeatherForecast'
 import Home from './pages/Home'
 //import ListProjects from './pages/Portfolio'
 
-const WeatherForecastPage = () => {
-    return (
-        <>
-            <WeatherForecast />
-        </>
-    );
-}
+//const WeatherForecastPage = () => {
+//    return (
+//        <>
+//            <WeatherForecast />
+//        </>
+//    );
+//}
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={< Home />} />
-                <Route path="/Forecast" element={< WeatherForecastPage />} />
+                {/*<Route path="/Forecast" element={< WeatherForecast />} />*/}
                 {/*<Route path="/project/:id" element={<ProjectPageLayout />} />*/}
             </Routes>
         </BrowserRouter>

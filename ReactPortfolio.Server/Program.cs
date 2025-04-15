@@ -5,7 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
+//load the json file.
+builder.Configuration.AddJsonFile("secrets.json",
+        optional: true,
+        reloadOnChange: true);
+//register the service 
+builder.Services.AddScoped<ReactPortfolio.Server.Services.DataRepositroy.IDataRepository, ReactPortfolio.Server.Services.DataRepositroy.DataRepository>();
 var app = builder.Build();
 
 app.UseDefaultFiles();
